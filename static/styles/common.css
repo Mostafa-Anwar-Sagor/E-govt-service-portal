@@ -120,15 +120,15 @@ nav li .register_btn:hover {
 }
 
 .lang-selector:hover {
-	color: #6db6c0;
+	color: #e6f2f3;
 }
 
 footer {
-	background-color: #dddddd;
+	background-color:#6db6c0;;
 	padding: 45px 0 20px;
 	font-size: 15px;
 	line-height: 24px;
-	color: #2d3436;
+	color: #010d10;
 }
 
 footer * {
@@ -136,7 +136,7 @@ footer * {
 }
 
 footer hr {
-	border-top-color: #999999;
+	border-top-color: #110202;
 	opacity: 0.5;
 }
 
@@ -164,7 +164,7 @@ footer h6 {
 .footer-links a:active,
 .footer-links a:focus,
 .footer-links a:hover {
-	color: #6db6c0;
+	color: #e10f00;
 	text-decoration: none;
 }
 

@@ -17,7 +17,7 @@ app.url_map.strict_slashes = False
 
 babel = Babel(app)
 
-app.config["BABEL_DEFAULT_LOCALE"] = "ar"
+app.config["BABEL_DEFAULT_LOCALE"] = "bm"
 app.config["BABEL_TRANSLATION_DIRECTORIES"] = "./translations"
 app.config["SECRET_KEY"] = getenv("SECRET_KEY")
 app.config["UPLOAD_DIRECTORY"] = uploads_dir
@@ -30,7 +30,7 @@ db = SQLAlchemy(app)
 
 class User(db.Model):
     __tablename__ = "users"
-    id = db.Column(db.String(14), primary_key=True)
+    id = db.Column(db.String(12), primary_key=True)
     password = db.Column(db.String(224))
     name = db.Column(db.String(128))
     phone = db.Column(db.String(16))

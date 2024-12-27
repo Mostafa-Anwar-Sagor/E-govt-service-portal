@@ -43,3 +43,4 @@ inputs.forEach(input => {
         else submitButton.disabled = true;
     });
 });
+

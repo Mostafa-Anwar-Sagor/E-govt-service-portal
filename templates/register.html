@@ -9,34 +9,34 @@
 {% block body %}
 <div class="form-box text-rtl" {% if get_locale() == 'ar' %} dir="rtl" {% endif %}>
     <h2>{{ _('SignUp') }}</h2>
-    {% if msg: %}<div class="form-msg">{{ msg }}</div>{% endif %}
+    {% if msg %}<div class="form-msg">{{ msg }}</div>{% endif %}
     <form action="{{ url_for('register') }}" method="post">
         <div class="input-box">
-            <input required type="text" name="id">
+            <input required type="text" name="id" placeholder="{{ _('Enter 12 Digit ID') }}" maxlength="12">
             <label for="id">{{ _('NationalID') }}</label>
         </div>
         <div class="input-box">
-            <input required type="text" name="name">
+            <input required type="text" name="name" placeholder="{{ _('Enter Your Full Name') }}">
             <label for="name">{{ _('FullName') }}</label>
         </div>
         <div class="input-box">
-            <input required type="text" name="phone">
+            <input required type="text" name="phone" placeholder="{{ _('Enter Your Phone Number') }}">
             <label for="phone">{{ _('PhoneNumber') }}</label>
         </div>
         <div class="input-box">
-            <input required type="text" name="email">
+            <input required type="text" name="email" placeholder="{{ _('Enter Your Email') }}">
             <label for="email">{{ _('Email') }}</label>
         </div>
         <div class="input-box">
-            <input required type="text" name="address">
+            <input required type="text" name="address" placeholder="{{ _('Enter Your Address') }}">
             <label for="address">{{ _('Address') }}</label>
         </div>
         <div class="input-box">
-            <input required type="password" name="password">
+            <input required type="password" name="password" placeholder="{{ _('Enter Your Password') }}">
             <label for="password">{{ _('Password') }}</label>
         </div>
         <div class="input-box">
-            <input required type="password" name="confirm-password">
+            <input required type="password" name="confirm-password" placeholder="{{ _('Confirm Your Password') }}">
             <label for="confirm-password">{{ _('ConfirmPassword') }}</label>
         </div>
         <input class="submit-btn" type="submit" value="{{ _('Register') }}">

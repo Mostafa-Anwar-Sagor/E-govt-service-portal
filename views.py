@@ -52,14 +52,14 @@ def get_locale():
     # Check if the language query parameter is set and valid
     if "lang" in request.args:
         lang = request.args.get("lang")
-        if lang in ["en", "ar"]:
+        if lang in ["en", "bm"]:
             session["lang"] = lang
             return session["lang"]
     # If not set via query, check if we have it stored in the session
     elif "lang" in session:
         return session.get("lang")
     # Otherwise, use the browser's preferred language
-    return request.accept_languages.best_match(["en", "ar"])
+    return request.accept_languages.best_match(["en", "bm"])
 
 
 babel = Babel(app, locale_selector=get_locale)
@@ -108,7 +108,8 @@ def setlang():
     """
 
     lang = request.args.get("lang", "en")
-    session["lang"] = lang
+    if lang in ["en", "bm"]:
+        session["lang"] = lang
     return redirect(request.referrer)
 
 
@@ -205,7 +206,7 @@ def register():
 
         if user:
             msg = _("UserAlreadyExists")
-        elif len(id) != 14 or not id.isdigit():
+        elif not id.isdigit() or len(id) != 12:  # Updated validation for numeric 12-digit IDs
             msg = _("IncorrectIDFormat")
         elif len(password) < 6 or len(password) > 28:
             msg = _("InvalidPasswordLength")

@@ -1,624 +1,1136 @@
-# Translations template for GovServicesPortal.
+# Translations template for PROJECT.
 # Copyright (C) 2024 ORGANIZATION
-# This file is distributed under the same license as the GovServicesPortal project.
-# Yousef Saeed <uosyph@gmail.com>, 2024.
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: GovServicesPortal v1\n"
-"Report-Msgid-Bugs-To: uosyph@gmail.com\n"
-"POT-Creation-Date: 2024-04-21 17:11+0200\n"
-"PO-Revision-Date: 2024-04-21 17:11+0200\n"
-"Last-Translator: Yousef Saeed <uosyph@gmail.com>\n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-12-24 16:56+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 
-#: views.py
+#: views.py:207
 msgid "UserAlreadyExists"
 msgstr ""
 
+#: views.py:209
 msgid "IncorrectIDFormat"
 msgstr ""
 
+#: views.py:211
 msgid "InvalidPasswordLength"
 msgstr ""
 
+#: views.py:213
 msgid "PasswordsDoNotMatch"
 msgstr ""
 
+#: views.py:223 views.py:272
 msgid "EmptyFields"
 msgstr ""
 
+#: views.py:242
 msgid "AccountCreated"
 msgstr ""
 
-msgid "AccountNotFound"
-msgstr ""
-
+#: views.py:246 views.py:285
 msgid "FillForm"
 msgstr ""
 
+#: views.py:270
+msgid "AccountNotFound"
+msgstr ""
+
+#: views.py:278
 msgid "LoginSuccess"
 msgstr ""
 
+#: views.py:282
 msgid "IncorrectPassword"
 msgstr ""
 
+#: views.py:363
 msgid "AccountInfoUpdated"
 msgstr ""
 
+#: views.py:377
 msgid "PasswordLengthError"
 msgstr ""
 
+#: views.py:379
 msgid "PasswordsDoNotMatchError"
 msgstr ""
 
+#: views.py:381
 msgid "SamePasswordError"
 msgstr ""
 
+#: views.py:387
 msgid "PasswordUpdated"
 msgstr ""
 
+#: views.py:389 views.py:401
 msgid "IncorrectPasswordError"
 msgstr ""
 
+#: views.py:404 views.py:481 views.py:532 views.py:756 views.py:940
+#: views.py:942
 msgid "FillFormError"
 msgstr ""
 
+#: views.py:447
 msgid "DuplicateNameError"
 msgstr ""
 
+#: views.py:457
 msgid "DepartmentCreated"
 msgstr ""
 
+#: views.py:478
 msgid "ServiceCreated"
 msgstr ""
 
+#: views.py:524
 msgid "ItemUpdatedSuccess"
 msgstr ""
 
-msgid "FillFormError"
-msgstr ""
-
-msgid "SearchTitle"
-msgstr ""
-
-msgid "SearchPlaceholder"
-msgstr ""
-
-msgid "SearchTitleItem"
-msgstr ""
-
-msgid "SearchPlaceholderItem"
-msgstr ""
-
-msgid "NoDepartmentsFound"
-msgstr ""
-
-msgid "NoServicesFound"
-msgstr ""
-
-msgid "NoItemsFound"
-msgstr ""
-
-msgid "OrderCreatedSuccess"
-msgstr ""
-
-msgid "FillFormError"
-msgstr ""
-
-msgid "OrderFinishedSuccess"
-msgstr ""
-
-msgid "OrderDeletedSuccess"
-msgstr ""
-
-msgid "FeedbackReceivedSuccess"
-msgstr ""
-
-msgid "FillFormError"
-msgstr ""
-
-msgid "DepartmentsListDescription"
-msgstr ""
-
-msgid "ServicesListDescription"
-msgstr ""
-
-msgid "DeptServices"
-msgstr ""
-
-#: templates/base.html
+#: templates/base.html:51 templates/base.html:120 templates/index.html:92
+#: templates/search.html:32 views.py:549
 msgid "Departments"
 msgstr ""
 
+#: views.py:550
+msgid "DepartmentsListDescription"
+msgstr ""
+
+#: templates/base.html:54 templates/base.html:121 templates/index.html:99
+#: templates/search.html:54 views.py:602 views.py:624
 msgid "Services"
 msgstr ""
 
-msgid "New"
+#: views.py:604
+msgid "DeptServices"
 msgstr ""
 
-msgid "NewOrder"
+#: views.py:606 views.py:625
+msgid "ServicesListDescription"
 msgstr ""
 
-msgid "MyOrders"
+#: views.py:670
+msgid "SearchTitle"
 msgstr ""
 
-msgid "Orders"
+#: templates/index.html:22 views.py:671
+msgid "SearchPlaceholder"
 msgstr ""
 
-msgid "Profile"
+#: views.py:677
+msgid "SearchTitleItem"
 msgstr ""
 
-msgid "AccountSettings"
+#: views.py:678
+msgid "SearchPlaceholderItem"
 msgstr ""
 
-msgid "SignUp"
+#: views.py:686
+msgid "NoDepartmentsFound"
 msgstr ""
 
-msgid "Login"
+#: views.py:694
+msgid "NoServicesFound"
 msgstr ""
 
-msgid "ContactUs"
+#: views.py:697
+msgid "NoItemsFound"
 msgstr ""
 
-msgid "About"
+#: views.py:752
+msgid "OrderCreatedSuccess"
 msgstr ""
 
-msgid "QuickLinks"
+#: views.py:878
+msgid "OrderFinishedSuccess"
 msgstr ""
 
-msgid "AboutInfo"
+#: views.py:884
+msgid "OrderDeletedSuccess"
 msgstr ""
 
-msgid "Copyright"
+#: views.py:938
+msgid "FeedbackReceivedSuccess"
 msgstr ""
 
-msgid "Rights"
-msgstr ""
-
-#: templates/404.html
+#: templates/404.html:13
 msgid "NotFoundMessage"
 msgstr ""
 
+#: templates/404.html:14
 msgid "NotFoundReason"
 msgstr ""
 
+#: templates/404.html:15
 msgid "CheckURL"
 msgstr ""
 
+#: templates/404.html:16
 msgid "ContactSupport"
 msgstr ""
 
+#: templates/404.html:17
 msgid "ThankYou"
 msgstr ""
 
+#: templates/404.html:19
 msgid "ReturnHome"
 msgstr ""
 
-#: templates/account.html
+#: templates/account.html:12 templates/base.html:131 templates/index.html:145
 msgid "AccountSettings"
 msgstr ""
 
+#: templates/account.html:13
 msgid "ManageProfileAccountPreferences"
 msgstr ""
 
+#: templates/account.html:15
 msgid "VisitYourProfile"
 msgstr ""
 
+#: templates/account.html:31
 msgid "Account"
 msgstr ""
 
+#: templates/account.html:42
 msgid "Security"
 msgstr ""
 
+#: templates/account.html:53
 msgid "Privacy"
 msgstr ""
 
+#: templates/account.html:60
 msgid "PersonalInformation"
 msgstr ""
 
+#: templates/account.html:61
 msgid "CustomizePersonalInformation"
 msgstr ""
 
+#: templates/account.html:66 templates/login.html:16 templates/profile.html:18
+#: templates/register.html:16
 msgid "NationalID"
 msgstr ""
 
+#: templates/account.html:70 templates/profile.html:28
+#: templates/register.html:20
 msgid "FullName"
 msgstr ""
 
+#: templates/account.html:74 templates/profile.html:38
+#: templates/register.html:24
 msgid "PhoneNumber"
 msgstr ""
 
+#: templates/account.html:78 templates/contact.html:23
+#: templates/profile.html:51 templates/register.html:28
 msgid "Email"
 msgstr ""
 
+#: templates/account.html:82 templates/profile.html:61
+#: templates/register.html:32
 msgid "Address"
 msgstr ""
 
+#: templates/account.html:85
 msgid "UpdatePersonalInfo"
 msgstr ""
 
+#: templates/account.html:89
 msgid "ChangePassword"
 msgstr ""
 
+#: templates/account.html:90
 msgid "UpdatePasswordSecurely"
 msgstr ""
 
+#: templates/account.html:95
 msgid "OldPassword"
 msgstr ""
 
+#: templates/account.html:99
 msgid "NewPassword"
 msgstr ""
 
+#: templates/account.html:103 templates/register.html:40
 msgid "ConfirmPassword"
 msgstr ""
 
+#: templates/account.html:106
 msgid "UpdatePassword"
 msgstr ""
 
+#: templates/account.html:110 templates/account.html:123
 msgid "DeleteAccount"
 msgstr ""
 
+#: templates/account.html:111
 msgid "PermanentlyRemoveAccount"
 msgstr ""
 
+#: templates/account.html:116
 msgid "EnterYourPassword"
 msgstr ""
 
+#: templates/account.html:121
 msgid "NoteDeleteAccount"
 msgstr ""
 
-#: templates/profile.html
-msgid "UserProfile"
+#: templates/base.html:58 templates/base.html:127 templates/index.html:123
+msgid "New"
 msgstr ""
 
-msgid "NationalID"
+#: templates/base.html:62 templates/base.html:124 templates/index.html:108
+msgid "NewOrder"
 msgstr ""
 
-msgid "FullName"
+#: templates/base.html:69 templates/base.html:125 templates/index.html:115
+#: templates/my_orders.html:11
+msgid "MyOrders"
 msgstr ""
 
-msgid "PhoneNumber"
+#: templates/base.html:73 templates/base.html:128 templates/index.html:130
+msgid "Orders"
 msgstr ""
 
-msgid "Email"
+#: templates/base.html:87 templates/base.html:133 templates/index.html:153
+#: templates/register.html:11
+msgid "SignUp"
 msgstr ""
 
-msgid "Address"
+#: templates/base.html:91 templates/base.html:134 templates/index.html:160
+#: templates/login.html:11 templates/login.html:22
+msgid "Login"
 msgstr ""
 
-msgid "IsAdmin"
+#: templates/base.html:114
+msgid "About"
 msgstr ""
 
-msgid "Yes"
+#: templates/base.html:115
+msgid "AboutInfo"
 msgstr ""
 
-msgid "No"
+#: templates/base.html:118
+msgid "QuickLinks"
 msgstr ""
 
-msgid "WouldYouLikeToEditProfile"
+#: templates/base.html:130 templates/index.html:138
+msgid "Profile"
 msgstr ""
 
-msgid "ClickHere"
+#: templates/base.html:136 templates/contact.html:11 templates/index.html:168
+msgid "ContactUs"
 msgstr ""
 
-msgid "ToAccessProfileEditingPage"
+#: templates/base.html:146
+msgid "Copyright"
 msgstr ""
 
-msgid "Logout"
+#: templates/base.html:146
+msgid "Rights"
 msgstr ""
 
-#: templates/contact.html
+#: templates/contact.html:12
 msgid "SendFeedbackComplaints"
 msgstr ""
 
+#: templates/contact.html:19
 msgid "Name"
 msgstr ""
 
-msgid "Email"
-msgstr ""
-
+#: templates/contact.html:27
 msgid "Phone"
 msgstr ""
 
+#: templates/contact.html:32
 msgid "Subject"
 msgstr ""
 
+#: templates/contact.html:36
 msgid "Message"
 msgstr ""
 
+#: templates/contact.html:39
 msgid "Send"
 msgstr ""
 
-#: templates/search.html
-msgid "DepartmentsMatchSearch"
-msgstr ""
-
-msgid "ServicesMatchSearch"
-msgstr ""
-
-#: templates/register.html
-msgid "Password"
-msgstr ""
-
-msgid "Register"
-msgstr ""
-
-msgid "AlreadyHaveAccount"
-msgstr ""
-
-msgid "LoginHere"
-msgstr ""
-
-#: templates/login.html
-msgid "DontHaveAccount"
-msgstr ""
-
-msgid "RegisterHere"
-msgstr ""
-
-#: templates/edit.html
+#: templates/edit.html:14
 msgid "Select"
 msgstr ""
 
-msgid "Or"
-msgstr ""
-
-msgid "ToEdit"
-msgstr ""
-
-msgid "Title"
-msgstr ""
-
-msgid "BriefDescription"
-msgstr ""
-
-msgid "ExtendedDescription"
-msgstr ""
-
-msgid "SupportsMarkdown"
-msgstr ""
-
-msgid "Update"
-msgstr ""
-
-msgid "Delete"
-msgstr ""
-
-msgid "AreYouSureDelete"
-msgstr ""
-
-msgid "?"
-msgstr ""
-
-#: templates/index.html
-msgid "PortalNavigation"
-msgstr ""
-
-msgid "Home"
-msgstr ""
-
-msgid "AccessEssentialServices"
-msgstr ""
-
-msgid "DiscoverDepartments"
-msgstr ""
-
-msgid "ExploreServices"
-msgstr ""
-
-msgid "InitiateNewOrder"
-msgstr ""
-
-msgid "ViewManageOrders"
-msgstr ""
-
-msgid "AddNewDepartmentService"
-msgstr ""
-
-msgid "AccessOrders"
-msgstr ""
-
-msgid "AccessUpdateProfile"
-msgstr ""
-
-msgid "AccountSettings"
-msgstr ""
-
-msgid "CustomizeAccountSettings"
-msgstr ""
-
-msgid "RegisterForPortal"
-msgstr ""
-
-msgid "AccessAccountServices"
-msgstr ""
-
-msgid "ReachOutSupport"
-msgstr ""
-
-msgid "PopularServices"
-msgstr ""
-
-msgid "HappeningNow"
-msgstr ""
-
-msgid "TotalOrders"
-msgstr ""
-
-msgid "OrdersLastWeek"
-msgstr ""
-
-msgid "TotalUsers"
-msgstr ""
-
-msgid "TotalServices"
-msgstr ""
-
-msgid "NewSignUp"
-msgstr ""
-
-msgid "NewSignUpDescription"
-msgstr ""
-
-msgid "ExploreAllServices"
-msgstr ""
-
-msgid "ExploreAllServicesDescription"
-msgstr ""
-
-msgid "OrderTheService"
-msgstr ""
-
-msgid "OrderTheServiceDescription"
-msgstr ""
-
-msgid "SearchIn"
-msgstr ""
-
+#: templates/edit.html:15 templates/index.html:18 templates/new.html:44
 msgid "Service"
 msgstr ""
 
-msgid "DepartmentsAnd"
+#: templates/edit.html:16 templates/new_order.html:44
+msgid "Or"
 msgstr ""
 
-msgid "WelcomeMessage"
-msgstr ""
-
-#: templates/listing.html
-msgid "Search"
-msgstr ""
-
-msgid "ViewAll"
-msgstr ""
-
-msgid "OrderService"
-msgstr ""
-
-msgid "EditThis"
-msgstr ""
-
-#: templates/list.html
-msgid "CreateNew"
-msgstr ""
-
-#: templates/orders.html
-msgid "UserOrdersTitle"
-msgstr ""
-
-msgid "UserOrdersDescription"
-msgstr ""
-
-#: templates/orders.html
-msgid "UserOrdersTitle"
-msgstr ""
-
-msgid "UserOrdersDescription"
-msgstr ""
-
-msgid "ReferenceNumber"
-msgstr ""
-
-msgid "OrderAt"
-msgstr ""
-
-msgid "Status"
-msgstr ""
-
-msgid "Active"
-msgstr ""
-
-msgid "NoOrdersLeft"
-msgstr ""
-
-#: templates/user_order.html
-msgid "OrderFor"
-msgstr ""
-
-msgid "UserNationalID"
-msgstr ""
-
-msgid "DoneAt"
-msgstr ""
-
-msgid "DetailsIncluded"
-msgstr ""
-
-msgid "FilesIncluded"
-msgstr ""
-
-msgid "Finished"
-msgstr ""
-
-msgid "FinishOrder"
-msgstr ""
-
-msgid "DeleteOrder"
-msgstr ""
-
-#: templates/order.html
-msgid "ReferenceMessage"
-msgstr ""
-
-#: templates/my_orders.html
-msgid "MyOrdersDescription"
-msgstr ""
-
-msgid "ActiveOrders"
-msgstr ""
-
-msgid "FinishedOrders"
-msgstr ""
-
-msgid "NoOrdersLift"
-msgstr ""
-
-#: templates/new.html
-msgid "CreateNewDefaultDescription"
-msgstr ""
-
-msgid "CreateNewDescription"
-msgstr ""
-
+#: templates/edit.html:17 templates/new.html:48
 msgid "Department"
 msgstr ""
 
+#: templates/edit.html:18
+msgid "ToEdit"
+msgstr ""
+
+#: templates/edit.html:28 templates/new.html:26
+msgid "Title"
+msgstr ""
+
+#: templates/edit.html:32 templates/new.html:30
+msgid "BriefDescription"
+msgstr ""
+
+#: templates/edit.html:37 templates/edit.html:39 templates/new.html:35
+#: templates/new.html:37
+msgid "ExtendedDescription"
+msgstr ""
+
+#: templates/edit.html:37 templates/edit.html:39 templates/new.html:35
+#: templates/new.html:37
+msgid "SupportsMarkdown"
+msgstr ""
+
+#: templates/edit.html:43
+msgid "Update"
+msgstr ""
+
+#: templates/edit.html:47
+msgid "AreYouSureDelete"
+msgstr ""
+
+#: templates/edit.html:47
+msgid "?"
+msgstr ""
+
+#: templates/edit.html:49
+msgid "Delete"
+msgstr ""
+
+#: templates/index.html:15
+msgid "WelcomeMessage"
+msgstr ""
+
+#: templates/index.html:18
+msgid "SearchIn"
+msgstr ""
+
+#: templates/index.html:18
+msgid "DepartmentsAnd"
+msgstr ""
+
+#: templates/index.html:38
+msgid "NewSignUp"
+msgstr ""
+
+#: templates/index.html:40
+msgid "NewSignUpDescription"
+msgstr ""
+
+#: templates/index.html:55
+msgid "ExploreAllServices"
+msgstr ""
+
+#: templates/index.html:57
+msgid "ExploreAllServicesDescription"
+msgstr ""
+
+#: templates/index.html:72
+msgid "OrderTheService"
+msgstr ""
+
+#: templates/index.html:74
+msgid "OrderTheServiceDescription"
+msgstr ""
+
+#: templates/index.html:80
+msgid "PortalNavigation"
+msgstr ""
+
+#: templates/index.html:85
+msgid "Home"
+msgstr ""
+
+#: templates/index.html:87
+msgid "AccessEssentialServices"
+msgstr ""
+
+#: templates/index.html:94
+msgid "DiscoverDepartments"
+msgstr ""
+
+#: templates/index.html:101
+msgid "ExploreServices"
+msgstr ""
+
+#: templates/index.html:110
+msgid "InitiateNewOrder"
+msgstr ""
+
+#: templates/index.html:117
+msgid "ViewManageOrders"
+msgstr ""
+
+#: templates/index.html:125
+msgid "AddNewDepartmentService"
+msgstr ""
+
+#: templates/index.html:132
+msgid "AccessOrders"
+msgstr ""
+
+#: templates/index.html:140
+msgid "AccessUpdateProfile"
+msgstr ""
+
+#: templates/index.html:147
+msgid "CustomizeAccountSettings"
+msgstr ""
+
+#: templates/index.html:155
+msgid "RegisterForPortal"
+msgstr ""
+
+#: templates/index.html:162
+msgid "AccessAccountServices"
+msgstr ""
+
+#: templates/index.html:170
+msgid "ReachOutSupport"
+msgstr ""
+
+#: templates/index.html:177
+msgid "PopularServices"
+msgstr ""
+
+#: templates/index.html:199
+msgid "HappeningNow"
+msgstr ""
+
+#: templates/index.html:203
+msgid "TotalOrders"
+msgstr ""
+
+#: templates/index.html:208
+msgid "OrdersLastWeek"
+msgstr ""
+
+#: templates/index.html:213
+msgid "TotalUsers"
+msgstr ""
+
+#: templates/index.html:218
+msgid "TotalServices"
+msgstr ""
+
+#: templates/list.html:21 templates/list.html:29 templates/new.html:14
+#: templates/new.html:18
+msgid "CreateNew"
+msgstr ""
+
+#: templates/list.html:39
+msgid "Search"
+msgstr ""
+
+#: templates/listing.html:33
+msgid "ViewAll"
+msgstr ""
+
+#: templates/listing.html:43
+msgid "OrderService"
+msgstr ""
+
+#: templates/listing.html:51
+msgid "EditThis"
+msgstr ""
+
+#: templates/login.html:20 templates/register.html:36
+msgid "Password"
+msgstr ""
+
+#: templates/login.html:25
+msgid "DontHaveAccount"
+msgstr ""
+
+#: templates/login.html:25
+msgid "RegisterHere"
+msgstr ""
+
+#: templates/my_orders.html:12
+msgid "MyOrdersDescription"
+msgstr ""
+
+#: templates/my_orders.html:18
+msgid "ActiveOrders"
+msgstr ""
+
+#: templates/my_orders.html:29 templates/my_orders.html:58
+#: templates/order.html:45 templates/orders.html:45
+#: templates/user_order.html:53
+msgid "OrderAt"
+msgstr ""
+
+#: templates/my_orders.html:37 templates/my_orders.html:75
+#: templates/order.html:63 templates/order.html:65 templates/orders.html:53
+#: templates/user_order.html:71 templates/user_order.html:73
+msgid "Status"
+msgstr ""
+
+#: templates/my_orders.html:37 templates/order.html:65 templates/orders.html:53
+#: templates/user_order.html:73
+msgid "Active"
+msgstr ""
+
+#: templates/my_orders.html:47
+msgid "FinishedOrders"
+msgstr ""
+
+#: templates/my_orders.html:67 templates/order.html:55
+#: templates/user_order.html:63
+msgid "DoneAt"
+msgstr ""
+
+#: templates/my_orders.html:75 templates/order.html:63
+#: templates/user_order.html:71
+msgid "Finished"
+msgstr ""
+
+#: templates/my_orders.html:84
+msgid "NoOrdersLift"
+msgstr ""
+
+#: templates/new.html:16
+msgid "CreateNewDescription"
+msgstr ""
+
+#: templates/new.html:19
+msgid "CreateNewDefaultDescription"
+msgstr ""
+
+#: templates/new.html:52
 msgid "AssociatedWithDepartment"
 msgstr ""
 
+#: templates/new.html:55
 msgid "NoAssociation"
 msgstr ""
 
+#: templates/new.html:61 templates/new_order.html:55
 msgid "Create"
 msgstr ""
 
-#: templates/new_order.html
+#: templates/new_order.html:12
 msgid "CreateOrder"
 msgstr ""
 
+#: templates/new_order.html:13
 msgid "CreateOrderDescription"
 msgstr ""
 
+#: templates/new_order.html:19 templates/new_order.html:22
 msgid "ChooseService"
 msgstr ""
 
+#: templates/new_order.html:32
 msgid "AdditionalDetails"
 msgstr ""
 
+#: templates/new_order.html:37
 msgid "UploadFilesTitle"
 msgstr ""
 
+#: templates/new_order.html:43
 msgid "DragAndDrop"
 msgstr ""
 
+#: templates/new_order.html:45
 msgid "BrowseFiles"
 msgstr ""
 
+#: templates/new_order.html:53
 msgid "SubmitAllRequiredFiles"
+msgstr ""
+
+#: templates/order.html:21 templates/user_order.html:21
+msgid "OrderFor"
+msgstr ""
+
+#: templates/order.html:41 templates/orders.html:43
+#: templates/user_order.html:41
+msgid "ReferenceNumber"
+msgstr ""
+
+#: templates/order.html:42
+msgid "ReferenceMessage"
+msgstr ""
+
+#: templates/order.html:70 templates/user_order.html:78
+msgid "DetailsIncluded"
+msgstr ""
+
+#: templates/order.html:77 templates/user_order.html:85
+msgid "FilesIncluded"
+msgstr ""
+
+#: templates/order.html:186 templates/user_order.html:200
+msgid "DeleteOrder"
+msgstr ""
+
+#: templates/orders.html:11
+msgid "UserOrdersTitle"
+msgstr ""
+
+#: templates/orders.html:12
+msgid "UserOrdersDescription"
+msgstr ""
+
+#: templates/orders.html:61
+msgid "NoOrdersLeft"
+msgstr ""
+
+#: templates/profile.html:11
+msgid "UserProfile"
+msgstr ""
+
+#: templates/profile.html:72
+msgid "IsAdmin"
+msgstr ""
+
+#: templates/profile.html:75
+msgid "Yes"
+msgstr ""
+
+#: templates/profile.html:77
+msgid "No"
+msgstr ""
+
+#: templates/profile.html:86
+msgid "WouldYouLikeToEditProfile"
+msgstr ""
+
+#: templates/profile.html:86
+msgid "ClickHere"
+msgstr ""
+
+#: templates/profile.html:86
+msgid "ToAccessProfileEditingPage"
+msgstr ""
+
+#: templates/profile.html:91
+msgid "Logout"
+msgstr ""
+
+#: templates/register.html:42
+msgid "Register"
+msgstr ""
+
+#: templates/register.html:45
+msgid "AlreadyHaveAccount"
+msgstr ""
+
+#: templates/register.html:45
+msgid "LoginHere"
+msgstr ""
+
+#: templates/search.html:33
+msgid "DepartmentsMatchSearch"
+msgstr ""
+
+#: templates/search.html:55
+msgid "ServicesMatchSearch"
+msgstr ""
+
+#: templates/user_order.html:43
+msgid "UserNationalID"
+msgstr ""
+
+#: templates/user_order.html:194
+msgid "FinishOrder"
+msgstr ""
+
+#: venv/Lib/site-packages/click/_termui_impl.py:556
+msgid "{editor}: Editing failed"
+msgstr ""
+
+#: venv/Lib/site-packages/click/_termui_impl.py:560
+msgid "{editor}: Editing failed: {e}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:1124
+msgid "Aborted!"
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:1349
+#: venv/Lib/site-packages/click/core.py:1379
+msgid "(Deprecated) {text}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:1396
+msgid "Options"
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:1424
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/Lib/site-packages/click/core.py:1437
+msgid "DeprecationWarning: The command {name!r} is deprecated."
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:1645
+msgid "Commands"
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:1677
+msgid "Missing command."
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:1755
+msgid "No such command {name!r}."
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:2313
+msgid "Value must be an iterable."
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:2336
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/Lib/site-packages/click/core.py:2783
+msgid "env var: {var}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:2813
+msgid "(dynamic)"
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:2828
+msgid "default: {default}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/core.py:2841
+msgid "required"
+msgstr ""
+
+#: venv/Lib/site-packages/click/decorators.py:457
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr ""
+
+#: venv/Lib/site-packages/click/decorators.py:520
+msgid "Show the version and exit."
+msgstr ""
+
+#: venv/Lib/site-packages/click/decorators.py:541
+msgid "Show this message and exit."
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:49
+#: venv/Lib/site-packages/click/exceptions.py:88
+msgid "Error: {message}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:80
+msgid "Try '{command} {option}' for help."
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:129
+msgid "Invalid value: {message}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:131
+msgid "Invalid value for {param_hint}: {message}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:187
+msgid "Missing argument"
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:189
+msgid "Missing option"
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:191
+msgid "Missing parameter"
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:193
+msgid "Missing {param_type}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:200
+msgid "Missing parameter: {param_name}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:220
+msgid "No such option: {name}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:234
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/Lib/site-packages/click/exceptions.py:270
+msgid "unknown error"
+msgstr ""
+
+#: venv/Lib/site-packages/click/exceptions.py:277
+msgid "Could not open file {filename!r}: {message}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/formatting.py:156
+msgid "Usage:"
+msgstr ""
+
+#: venv/Lib/site-packages/click/parser.py:233
+msgid "Argument {name!r} takes {nargs} values."
+msgstr ""
+
+#: venv/Lib/site-packages/click/parser.py:415
+msgid "Option {name!r} does not take a value."
+msgstr ""
+
+#: venv/Lib/site-packages/click/parser.py:475
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/Lib/site-packages/click/shell_completion.py:325
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr ""
+
+#: venv/Lib/site-packages/click/shell_completion.py:333
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr ""
+
+#: venv/Lib/site-packages/click/termui.py:158
+msgid "Repeat for confirmation"
+msgstr ""
+
+#: venv/Lib/site-packages/click/termui.py:174
+msgid "Error: The value you entered was invalid."
+msgstr ""
+
+#: venv/Lib/site-packages/click/termui.py:176
+msgid "Error: {e.message}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/termui.py:187
+msgid "Error: The two entered values do not match."
+msgstr ""
+
+#: venv/Lib/site-packages/click/termui.py:243
+msgid "Error: invalid input"
+msgstr ""
+
+#: venv/Lib/site-packages/click/termui.py:773
+msgid "Press any key to continue..."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:267
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:301
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/Lib/site-packages/click/types.py:395
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/Lib/site-packages/click/types.py:415
+msgid "{value!r} is not a valid {number_type}."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:471
+msgid "{value} is not in the range {range}."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:612
+msgid "{value!r} is not a valid boolean."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:636
+msgid "{value!r} is not a valid UUID."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:826
+msgid "file"
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:828
+msgid "directory"
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:830
+msgid "path"
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:881
+msgid "{name} {filename!r} does not exist."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:890
+msgid "{name} {filename!r} is a file."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:898
+msgid "{name} {filename!r} is a directory."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:907
+msgid "{name} {filename!r} is not readable."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:916
+msgid "{name} {filename!r} is not writable."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:925
+msgid "{name} {filename!r} is not executable."
+msgstr ""
+
+#: venv/Lib/site-packages/click/types.py:991
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/Lib/site-packages/humanize/number.py:303
+msgid "zero"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/number.py:304
+msgid "one"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/number.py:305
+msgid "two"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/number.py:306
+msgid "three"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/number.py:307
+msgid "four"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/number.py:308
+msgid "five"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/number.py:309
+msgid "six"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/number.py:310
+msgid "seven"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/number.py:311
+msgid "eight"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/number.py:312
+msgid "nine"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/time.py:165
+#: venv/Lib/site-packages/humanize/time.py:264
+msgid "a moment"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/time.py:168
+msgid "a second"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/time.py:174
+msgid "a minute"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/time.py:181
+msgid "an hour"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/time.py:189
+msgid "a day"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/time.py:198
+msgid "a month"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/time.py:204
+msgid "a year"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/time.py:211
+msgid "1 year, 1 month"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/time.py:261
+#, python-format
+msgid "%s from now"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/time.py:261
+#, python-format
+msgid "%s ago"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/time.py:265
+msgid "now"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/time.py:298
+msgid "today"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/time.py:301
+msgid "tomorrow"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/time.py:304
+msgid "yesterday"
+msgstr ""
+
+#: venv/Lib/site-packages/humanize/time.py:615
+#, python-format
+msgid "%s and %s"
 msgstr ""
 

@@ -1,5 +1,5 @@
 CREATE TABLE users (
-    id VARCHAR(14) PRIMARY KEY,
+    id VARCHAR(12) PRIMARY KEY,
     password VARCHAR(224),
     name VARCHAR(128),
     phone VARCHAR(16),
