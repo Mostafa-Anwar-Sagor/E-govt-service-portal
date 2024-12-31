@@ -32,7 +32,7 @@ from datetime import datetime, timedelta
 from humanize import naturaltime
 from uuid import uuid4
 from os import path
-from flask import Blueprint
+
 from models import *
 
 
@@ -989,3 +989,8 @@ def page_not_found(e):
     """
 
     return render_template("404.html"), 404
+
+@app.route("/admins", methods=["GET"])
+def get_admins():
+    admins = User.query.filter_by(is_admin=True).all()
+    return [{"id": admin.id, "email": admin.email, "name": admin.name} for admin in admins]

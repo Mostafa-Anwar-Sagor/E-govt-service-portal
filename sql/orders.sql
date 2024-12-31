@@ -1,9 +1,9 @@
 CREATE TABLE orders (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY, -- Use SERIAL for auto-incrementing ID
     details VARCHAR(4096),
     file_paths VARCHAR(4096),
-    start_date DATETIME,
-    end_date DATETIME,
+    start_date TIMESTAMP, -- Replace DATETIME with TIMESTAMP
+    end_date TIMESTAMP, -- Replace DATETIME with TIMESTAMP
     is_done BOOLEAN DEFAULT FALSE,
     service_id INT,
     user_id VARCHAR(14),
