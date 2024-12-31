@@ -1,5 +1,5 @@
 CREATE TABLE departments (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY, -- Use SERIAL for auto-incrementing ID
     title VARCHAR(128),
     description VARCHAR(432),
     readme TEXT
