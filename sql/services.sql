@@ -1,5 +1,6 @@
+
 CREATE TABLE services (
-    id INT SERIAL PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(128),
     description VARCHAR(432),
     readme TEXT,

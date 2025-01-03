@@ -24,6 +24,7 @@ app.config["BABEL_DEFAULT_LOCALE"] = "ar"
 app.config["BABEL_TRANSLATION_DIRECTORIES"] = "./translations"
 app.config["SECRET_KEY"] = getenv("SECRET_KEY")
 app.config["UPLOAD_DIRECTORY"] = uploads_dir
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 # Ensure all environment variables are properly loaded
 # If any variable is missing, log a warning or raise an error for debugging
@@ -38,8 +39,8 @@ babel = Babel(app)
 # Models
 class User(db.Model):
     __tablename__ = "users"
-    id = db.Column(db.String(12), primary_key=True)  # User ID as primary key
-    password = db.Column(db.String(224))  # Password with sufficient length
+    id = db.Column(db.String(12), primary_key=True)
+    password = db.Column(db.String(224))
     name = db.Column(db.String(128))
     phone = db.Column(db.String(16))
     email = db.Column(db.String(48))
@@ -48,38 +49,34 @@ class User(db.Model):
 
 class Department(db.Model):
     __tablename__ = "departments"
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)  # Integer auto-increment ID
-    title = db.Column(db.String(128))
-    description = db.Column(db.String(432))
-    readme = db.Column(db.Text)  # Text field for longer descriptions
-
-class Service(db.Model):
-    __tablename__ = "services"
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)  # Integer auto-increment ID
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     title = db.Column(db.String(128))
     description = db.Column(db.String(432))
     readme = db.Column(db.Text)
-    department_id = db.Column(db.Integer, db.ForeignKey("departments.id"))  # Foreign key for departments
-    department = db.relationship(
-        "Department", backref=db.backref("services", lazy="joined")
-    )
+
+class Service(db.Model):
+    __tablename__ = "services"
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    title = db.Column(db.String(128))
+    description = db.Column(db.String(432))
+    readme = db.Column(db.Text)
+    department_id = db.Column(db.Integer, db.ForeignKey("departments.id"),nullable=True)
+    department = db.relationship("Department", backref="services")
+
 
 class Order(db.Model):
     __tablename__ = "orders"
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)  # Integer auto-increment ID
-    details = db.Column(db.String(4096))  # Details field for large text
-    file_paths = db.Column(db.String(4096))  # File paths (e.g., for uploads)
-    start_date = db.Column(db.DateTime)  # Start date and time
-    end_date = db.Column(db.DateTime)  # End date and time
-    is_done = db.Column(db.Boolean, default=False)  # Boolean field for completion status
-    service_id = db.Column(db.Integer, db.ForeignKey("services.id"))  # Foreign key for services
-    service = db.relationship(
-        "Service", backref=db.backref("orders", lazy="joined")
-    )
-    user_id = db.Column(db.String(12), db.ForeignKey("users.id"))  # Foreign key for users
-    user = db.relationship(
-        "User", backref=db.backref("orders", lazy="joined")
-    )
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    details = db.Column(db.String(4096))
+    file_paths = db.Column(db.String(4096))
+    start_date = db.Column(db.DateTime)
+    end_date = db.Column(db.DateTime)
+    is_done = db.Column(db.Boolean, default=False)
+    service_id = db.Column(db.Integer, db.ForeignKey("services.id"))
+    service = db.relationship("Service", backref="orders")
+    user_id = db.Column(db.String(14), db.ForeignKey("users.id"))
+    user = db.relationship("User", backref="orders")
+
 
 # Create tables if running this file directly
 if __name__ == "__main__":

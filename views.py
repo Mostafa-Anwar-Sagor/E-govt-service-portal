@@ -407,80 +407,67 @@ def account():
 
     return render_template("account.html", user=user, msg=msg)
 
-
 @app.route("/new", methods=["GET", "POST"])
 def new():
     """
-    Handle creation of new departments or services.
-
-    This function handles the creation of new departments or services by admin users.
-
-    Returns:
-        render_template: Renders the new.html template with relevant data.
+    Handle creation of new departments or services by admin users.
     """
-
-    if "loggedin" not in session or session["is_admin"] == False:
+    if "loggedin" not in session or not session.get("is_admin", False):
         abort(403)
 
     departments = Department.query.all()
     recommend = request.args.get("recommend")
     msg = ""
 
-    if (
-        request.method == "POST"
-        and "title" in request.form
-        and "description" in request.form
-        and "type" in request.form
-        and "associated" in request.form
-    ):
-        title = request.form["title"]
-        description = request.form["description"]
-        readme = request.form["readme"] if "readme" in request.form else None
-        type_of = request.form["type"]
-        associated_with = (
-            request.form["associated"] if request.form["associated"] != "none" else None
-        )
+    if request.method == "POST":
+        title = request.form.get("title")
+        description = request.form.get("description")
+        readme = request.form.get("readme")
+        type_of = request.form.get("type")
+        associated_with = request.form.get("associated", "none")
+        associated_with = None if associated_with == "none" else associated_with
 
-        existing = (
-            Department.query.filter_by(title=title).first()
-            or Service.query.filter_by(title=title).first()
-        )
-        if existing:
-            msg = _("DuplicateNameError")
-        elif type_of == "Department":
-            new = Department(
-                title=title,
-                description=description,
-                readme=readme,
+        # Validate inputs
+        if not title or not description or not type_of:
+            msg = _("All fields are required.")
+        else:
+            existing = (
+                Department.query.filter_by(title=title).first()
+                or Service.query.filter_by(title=title).first()
             )
-            db.session.add(new)
-            db.session.commit()
-
-            flash(_("DepartmentCreated"), "success")
-            return redirect(url_for("department", id=new.id))
-        elif type_of == "Service":
-            department = Department.query.filter_by(id=associated_with).first()
-            if department:
-                new = Service(
-                    title=title,
-                    description=description,
-                    readme=readme,
-                    department_id=department.id,
-                )
-            else:
-                new = Service(
-                    title=title,
-                    description=description,
-                    readme=readme,
-                )
-
-            db.session.add(new)
-            db.session.commit()
-
-            flash(_("ServiceCreated"), "success")
-            return redirect(url_for("service", id=new.id))
-    elif request.method == "POST":
-        msg = _("FillFormError")
+            if existing:
+                msg = _("Duplicate name found for a Department or Service.")
+            elif type_of == "Department":
+                try:
+                    new_department = Department(
+                        title=title, description=description, readme=readme
+                    )
+                    db.session.add(new_department)
+                    db.session.commit()
+                    flash(_("Department created successfully!"), "success")
+                    return redirect(url_for("department", id=new_department.id))
+                except Exception as e:
+                    db.session.rollback()
+                    msg = _("Error creating department: ") + str(e)
+            elif type_of == "Service":
+                try:
+                    department = Department.query.filter_by(id=associated_with).first()
+                    if not department:
+                        msg = _("Invalid department association.")
+                    else:
+                        new_service = Service(
+                            title=title,
+                            description=description,
+                            readme=readme,
+                            department_id=department.id,
+                        )
+                        db.session.add(new_service)
+                        db.session.commit()
+                        flash(_("Service created successfully!"), "success")
+                        return redirect(url_for("service", id=new_service.id))
+                except Exception as e:
+                    db.session.rollback()
+                    msg = _("Error creating service: ") + str(e)
 
     return render_template(
         "new.html", departments=departments, recommend=recommend, msg=msg
@@ -489,6 +476,7 @@ def new():
 
 @app.route("/edit", methods=["GET", "POST"])
 def edit():
+  
     """
     Handle editing of existing departments or services.
 
@@ -497,7 +485,6 @@ def edit():
     Returns:
         render_template: Renders the edit.html template with relevant data.
     """
-
     if "loggedin" not in session or session["is_admin"] == False:
         abort(403)
 
@@ -510,6 +497,10 @@ def edit():
         item = Department.query.filter_by(id=item_id).first()
     else:
         item = None
+
+    if not item:
+        flash(_("ItemNotFound"), "failure")
+        return redirect(url_for("index"))
 
     if (
         request.method == "POST"
@@ -529,6 +520,7 @@ def edit():
         db.session.delete(item)
         db.session.commit()
 
+        flash(_("ItemDeletedSuccess").format(item_type.capitalize()), "success")
         return redirect(url_for("index"))
     elif request.method == "POST":
         flash(_("FillFormError"), "failure")
