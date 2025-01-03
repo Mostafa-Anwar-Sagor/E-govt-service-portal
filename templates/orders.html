@@ -47,7 +47,7 @@
                                 {{ naturaltime(order.start_date) }}
                                 -
                             {% endif %}
-                            {% set time = strptime(str(order.start_date), "%Y-%m-%d %H:%M:%S") %}
+                            {% set time = strptime(str(order.start_date), "%Y-%m-%d %H:%M:%S.%f") %}
                             {{ time.strftime("%d %b, %Y at %I:%M %p") }}
                         </p>
                         <p><b>{{ _('Status')}}</b> <span class="status-active">{{ _('Active')}}</span></p>
