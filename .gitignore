@@ -5,3 +5,5 @@ __pycache__/
 .env
 db_dump.py
 uploads
+babel.cfg
+messages.pot
